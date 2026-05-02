@@ -1,0 +1,31 @@
+                    🌐 Internet (Users)
+                           |
+                      HTTPS (443)
+                           |
+                    [ Firewall #1 ]
+                           |
+                  [ Load Balancer ]
+                  (SSL Certificate)
+                           |
+        -----------------------------------------
+        |                  |                    |
+   ------------       ------------        ------------
+   | Server 1 |       | Server 2 |        | Server 3 |
+   ------------       ------------        ------------
+   | Firewall |       | Firewall |        | Firewall |
+   |----------|       |----------|        |----------|
+   | Web      |       | Web      |        | Web      |
+   | Server   |       | Server   |        | Server   |
+   |----------|       |----------|        |----------|
+   | App      |       | App      |        | App      |
+   | Server   |       | Server   |        | Server   |
+   |----------|       |----------|        |----------|
+   | MySQL    |       | MySQL    |        | MySQL    |
+   |----------|       |----------|        |----------|
+   | Monitor  |       | Monitor  |        | Monitor  |
+   ------------       ------------        ------------
+         |                  |                    |
+         ----------------------------------------
+                           |
+                 📊 Monitoring Service
+               (e.g., Sumo Logic / ELK)
