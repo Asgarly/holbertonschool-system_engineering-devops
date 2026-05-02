@@ -1,0 +1,26 @@
+         USER (Browser)
+                |
+                v
+        www.foobar.com
+                |
+                v
+              DNS
+                |
+        A record → 8.8.8.8
+                |
+                v
+        SERVER (8.8.8.8)
+        -------------------
+        |      Nginx      |
+        |  (Web Server)   |
+        -------------------
+                |
+                v
+        -------------------
+        |  App Server     |
+        | (Backend Logic) |
+        -------------------
+          |           |
+          v           v
+   App Files      MySQL Database
+   (Codebase)        (Data) make this a diagram
