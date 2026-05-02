@@ -1,0 +1,25 @@
+            USER (Browser)
+                  |
+                  v
+          www.foobar.com
+                  |
+                  v
+                DNS
+                  |
+          A record → 8.8.8.8
+                  |
+                  v
+        LOAD BALANCER (HAProxy)
+             /            \
+            v              v
+     SERVER 1         SERVER 2
+    -----------       -----------
+    |  Nginx  |       |  Nginx  |
+    |  App    |       |  App    |
+    |  Files  |       |  Files  |
+    -----------       -----------
+          \              /
+           \            /
+            v          v
+          DATABASE (MySQL)
+         Primary   →   Replica
